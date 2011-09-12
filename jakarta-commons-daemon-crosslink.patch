@@ -1,0 +1,20 @@
+--- build.xml~	2003-09-29 12:59:11.000000000 +0300
++++ build.xml	2003-10-11 16:04:19.000000000 +0300
+@@ -104,6 +104,9 @@
+   <!-- The test runner to execute -->
+   <property name="test.runner"             value="junit.textui.TestRunner"/>
+ 
++  <property name="j2se.javadoc"
++    value="http://java.sun.com/j2se/1.4/docs/api/"/>
++
+ 
+ <!-- ========== Executable Targets ======================================== -->
+ 
+@@ -197,6 +200,7 @@
+                  bottom="Copyright (c) 2001-2002 - Apache Software Foundation">
+       <classpath refid="compile.classpath"/>
+       <classpath location="${ant.lib}/ant.jar"/>
++      <link href="${j2se.javadoc}"/>
+     </javadoc>
+   </target>
+ 
